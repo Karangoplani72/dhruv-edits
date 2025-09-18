@@ -103,3 +103,51 @@
   background: #b9972c;
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack info & form */
+    gap: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: unset;
+    min-width: unset;
+    text-align: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%; /* Full width inputs & button */
+  }
+
+  .socials a {
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact .tagline {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+  }
+
+  .contact-form button {
+    padding: 12px;
+  }
+}

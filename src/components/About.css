@@ -86,3 +86,35 @@
   font-size: 0.9rem;
   color: #bbb;
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack image & text */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image img,
+  .gold-glow {
+    width: 250px; /* Slightly smaller image on mobile */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text .intro {
+    font-size: 1rem;
+  }
+
+  .about-text ul li {
+    font-size: 0.9rem;
+  }
+}

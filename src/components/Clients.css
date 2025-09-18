@@ -47,3 +47,20 @@
   font-size: 1rem;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 clients per row */
+    gap: 30px;
+  }
+
+  .client-card img {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr; /* 1 client per row */
+  }
+}

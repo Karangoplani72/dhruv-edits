@@ -46,3 +46,23 @@
   font-size: 1rem;
   color: #ccc;
 }
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 25px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services h2 {
+    font-size: 1.6rem;
+  }
+
+  .counter {
+    font-size: 1.5rem;
+  }
+}

@@ -57,3 +57,24 @@
   text-align: center;
   line-height: 1.4;
 }
+@media (max-width: 768px) {
+  .video-row {
+    flex-direction: column; /* Stack videos vertically */
+    gap: 30px;
+  }
+
+  .portrait-video {
+    width: 100%; /* Full width videos */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card h3 {
+    font-size: 1rem;
+  }
+
+  .video-card p {
+    font-size: 0.9rem;
+  }
+}
