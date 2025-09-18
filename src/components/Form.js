@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-/*
-  Form expects an onClose() prop.
-  - Cancel button calls onClose()
-  - Clicking outside the modal (overlay) also calls onClose()
-  - Clicking inside the form stops propagation so modal doesn't close
-*/
-
 export default function Form({ onClose }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,7 +8,6 @@ export default function Form({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: replace with real submission (API/email)
     console.log("Form submitted:", { name, email, message });
     alert("Thanks — your request was submitted!");
 
@@ -30,7 +22,6 @@ export default function Form({ onClose }) {
     <div
       className="form-overlay"
       onClick={() => {
-        // clicking the overlay closes modal
         if (onClose) onClose();
       }}
       aria-modal="true"
@@ -38,7 +29,7 @@ export default function Form({ onClose }) {
     >
       <div
         className="form-container"
-        onClick={(e) => e.stopPropagation()} // important: prevent overlay click when interacting with form
+        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside form
       >
         <h2>Get Started with DhruvEdits</h2>
 

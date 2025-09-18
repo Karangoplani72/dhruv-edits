@@ -21,7 +21,7 @@ function App() {
       <Portfolio />
       <Contact setShowForm={setShowForm} />
       <Footer />
-      {showForm && <Form setShowForm={setShowForm} />}
+      {showForm && <Form onClose={() => setShowForm(false)} />}
     </>
   );
 }
