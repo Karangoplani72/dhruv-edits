@@ -1,54 +1,56 @@
 import React from "react";
 import "./Portfolio.css";
 
-const Portfolio = () => {
-  const portfolioItems = [
+function Portfolio() {
+  // Array of videos — just add new video objects here
+  const videos = [
     {
-      id: 1,
-      type: "video",
-      src: "/videos/demo1.mp4",
-      title: "Video Project 1",
-      description: "Demo of Project 1",
+      src: "videos/demo1.mp4",
+      title: "Wedding Highlight",
+      description: "A cinematic wedding edit capturing emotions and memories.",
     },
     {
-      id: 2,
-      type: "video",
-      src: "/videos/demo2.mp4",
-      title: "Video Project 2",
-      description: "Demo of Project 2",
+      src: "videos/demo2.mp4",
+      title: "Instagram Reel",
+      description: "Trendy short-form edit with fast cuts & transitions.",
     },
     {
-      id: 3,
-      type: "video",
       src: "videos/demo3.mp4",
-      title: "Video Project 3",
-      description: "Demo of Project 3",
+      title: "Travel Montage",
+      description: "Beautiful locations synced with beats & storytelling.",
     },
+    // {
+    //   src: "videos/demo4.mp4",
+    //   title: "Event Coverage",
+    //   description: "Capturing live events with dynamic storytelling.",
+    // },
+    // {
+    //   src: "videos/demo5.mp4",
+    //   title: "Corporate Promo",
+    //   description: "Professional corporate video highlighting brand identity.",
+    // },
   ];
 
   return (
     <section className="portfolio" id="portfolio">
-      <h2 className="section-title">My Portfolio</h2>
-      <div className="portfolio-grid">
-        {portfolioItems.map((item) => (
-          <div key={item.id} className="portfolio-item">
+      <h2>My Work</h2>
+      <div className="video-row">
+        {videos.map((video, index) => (
+          <div key={index} className="video-card">
             <video
-              className="portfolio-video"
-              src={item.src}
-              controls
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-            <div className="portfolio-info">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
+              className="portrait-video"
+              src={video.src}
+              autoPlay
+              muted
+              loop
+            />
+            <h3>{video.title}</h3>
+            <p>{video.description}</p>
           </div>
         ))}
       </div>
     </section>
   );
-};
+}
 
 export default Portfolio;
