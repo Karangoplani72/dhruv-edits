@@ -1,34 +1,33 @@
-import React from "react";
+import { useRef } from "react";
 import "./Portfolio.css";
 
 function Portfolio() {
-  // Array of videos — just add new video objects here
+  const videosRef = useRef([]);
+
+  const handleVolume = (index) => {
+    videosRef.current.forEach((video, i) => {
+      if (video) {
+        video.muted = i !== index; // Mute all except the clicked one
+      }
+    });
+  };
+
   const videos = [
     {
       src: "videos/demo1.mp4",
       title: "Wedding Highlight",
-      description: "A cinematic wedding edit capturing emotions and memories.",
+      desc: "A cinematic wedding edit capturing emotions and memories.",
     },
     {
       src: "videos/demo2.mp4",
       title: "Instagram Reel",
-      description: "Trendy short-form edit with fast cuts & transitions.",
+      desc: "Trendy short-form edit with fast cuts & transitions.",
     },
     {
       src: "videos/demo3.mp4",
       title: "Travel Montage",
-      description: "Beautiful locations synced with beats & storytelling.",
+      desc: "Beautiful locations synced with beats & storytelling.",
     },
-    // {
-    //   src: "videos/demo4.mp4",
-    //   title: "Event Coverage",
-    //   description: "Capturing live events with dynamic storytelling.",
-    // },
-    // {
-    //   src: "videos/demo5.mp4",
-    //   title: "Corporate Promo",
-    //   description: "Professional corporate video highlighting brand identity.",
-    // },
   ];
 
   return (
@@ -36,16 +35,20 @@ function Portfolio() {
       <h2>My Work</h2>
       <div className="video-row">
         {videos.map((video, index) => (
-          <div key={index} className="video-card">
+          <div className="video-card" key={index}>
             <video
               className="portrait-video"
               src={video.src}
               autoPlay
-              muted
               loop
+              muted
+              playsInline
+              controls
+              ref={(el) => (videosRef.current[index] = el)}
+              onClick={() => handleVolume(index)} // Click to unmute this video
             />
             <h3>{video.title}</h3>
-            <p>{video.description}</p>
+            <p>{video.desc}</p>
           </div>
         ))}
       </div>

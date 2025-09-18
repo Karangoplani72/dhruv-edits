@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaEnvelope, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
 import "./Contact.css";
-import { FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   const [status, setStatus] = useState("");
@@ -34,7 +34,7 @@ const Contact = () => {
         <div className="contact-info">
           <div className="info-item">
             <FaEnvelope className="icon" />
-            <p>yourname@email.com</p>
+            <p>dhruvnankani8@gmail.com</p>
           </div>
           <div className="info-item">
             <FaPhone className="icon" />
@@ -44,8 +44,7 @@ const Contact = () => {
           <div className="socials">
             <a href="https://instagram.com/dhruv.nankani_/" target="_blank" rel="noreferrer"><FaInstagram /></a>
             <a href="https://linkedin.com/in/dhruv-nankani-333878302/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-            <a href="https://youtube.com/" target="_blank" rel="noreferrer"><FaYoutube /></a>
-          </div>
+            </div>
         </div>
 
         {/* Right Form */}
