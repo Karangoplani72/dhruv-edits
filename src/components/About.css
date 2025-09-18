@@ -1,3 +1,4 @@
+/* About Section */
 .about {
   text-align: center;
   padding: 80px 20px;
@@ -35,10 +36,9 @@
   border-radius: 50%;
   position: relative;
   z-index: 2;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.7),
-                0 0 60px rgba(212, 175, 55, 0.4);
-    transition: transform 0.3s ease;
-
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.7),
+              0 0 60px rgba(212, 175, 55, 0.4);
+  transition: transform 0.3s ease;
 }
 
 .gold-glow {
@@ -74,28 +74,38 @@
 .about-text ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .about-text ul li {
   margin: 10px 0;
   font-size: 1rem;
   color: #eee;
+  display: inline-block; /* Center each item */
 }
 
-.about-text ul li span {
-  font-size: 0.9rem;
-  color: #bbb;
-}
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column; /* Stack image & text */
     gap: 30px;
+    align-items: center;   /* Center content horizontally */
     text-align: center;
   }
 
   .about-text {
-    text-align: center;
+    text-align: justify;
+  }
+
+  .about-text ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0 auto; /* Center list */
+  }
+
+  .about-text ul li {
+    margin: 8px 0;
+    font-size: 1rem;
   }
 
   .about-image img,
