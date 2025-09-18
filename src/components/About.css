@@ -1,104 +1,88 @@
 .about {
-    padding: 80px 10%;
-    /* Dark background for cinematic vibe */
-    color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  background: #121212;
+  color: #fff;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #D4AF37;
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Profile Image with Golden Glow */
+.about-image {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
 }
 
 .about-image img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 360px;
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.7),
                 0 0 60px rgba(212, 175, 55, 0.4);
     transition: transform 0.3s ease;
+
 }
 
-.about-image img:hover {
-    transform: scale(1.05);
+.gold-glow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(212,175,55,0.4) 0%, transparent 70%);
+  z-index: 1;
 }
 
-.about-content {
-    max-width: 600px;
+/* Text Section */
+.about-text {
+  flex: 2;
+  min-width: 300px;
 }
 
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #f8c24a;
-    /* Accent color */
+.about-text .intro {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ccc;
 }
 
-.about-content p {
-    margin-bottom: 15px;
-    line-height: 1.7;
-    font-size: 1.1rem;
+.about-text h3 {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #D4AF37;
 }
 
-.about-content span {
-    color: #f8c24a;
-    font-weight: bold;
+.about-text ul {
+  list-style: none;
+  padding: 0;
 }
 
-.skills {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.about-text ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #eee;
 }
 
-.skills span {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 8px 15px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: background 0.3s ease;
-}
-
-.skills span:hover {
-    background: #f8c24a;
-    color: #000;
-}
-
-.about-buttons {
-    margin-top: 25px;
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    background: #f8c24a;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #fff;
-}
-
-.btn-outline {
-    border: 2px solid #f8c24a;
-    color: #f8c24a;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-outline:hover {
-    background: #f8c24a;
-    color: #000;
+.about-text ul li span {
+  font-size: 0.9rem;
+  color: #bbb;
 }
