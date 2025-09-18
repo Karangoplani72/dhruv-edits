@@ -56,57 +56,9 @@ body {
 /* -------------------- Footer -------------------- */
 
 
-/* -------------------- Mobile & Tablet -------------------- */
-@media (max-width: 768px) {
 
-  /* Header */
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .nav-menu a {
-    margin: 5px 0;
-  }
 
-  /* Hero */
-  .hero {
-    padding: 100px 15px;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .hero button {
-    width: 100%;
-    max-width: 200px;
-  }
 
-  /* About / Services / Portfolio */
-  .about, .services, .portfolio {
-    padding: 60px 15px;
-  }
-
-  /* Video row */
-  .portrait-video {
-    width: 150px;
-    height: 270px;
-  }
-  .video-card h3 {
-    font-size: 1rem;
-  }
-  .video-card p {
-    font-size: 0.9rem;
-  }
-}
 
 
 /* -------------------- Form -------------------- */

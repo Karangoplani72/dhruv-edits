@@ -19,7 +19,7 @@ function Hero() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: true, // Show prev/next arrows
+    arrows: false, // Hide arrows (since we removed them in CSS)
     pauseOnHover: true,
   };
 
@@ -28,13 +28,23 @@ function Hero() {
       <Slider {...settings} className="hero-slider">
         {images.map((img, index) => (
           <div key={index} className="hero-slide">
-            <img src={img} alt={`Slide ${index + 1}`} className="hero-image" />
+            <img
+              src={img}
+              alt={`Slide ${index + 1}`}
+              className="hero-image"
+            />
             <div className="hero-overlay">
-              <h1>DhruvEdits</h1>
-              <p>Crafting cinematic stories, transforming your memories into unforgettable edits.</p>
+              <h1 className="hero-title">DhruvEdits</h1>
+              <p className="hero-subtitle">
+                Crafting cinematic stories, transforming your memories into unforgettable edits.
+              </p>
               <div className="hero-buttons">
-                <a href="#portfolio" className="btn-primary">View Portfolio</a>
-                <a href="#contact" className="btn-secondary">Get in Touch</a>
+                <a href="#portfolio" className="btn-primary">
+                  View Portfolio
+                </a>
+                <a href="#contact" className="btn-secondary">
+                  Get in Touch
+                </a>
               </div>
             </div>
           </div>

@@ -1,112 +1,113 @@
 .hero {
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-slider {
-  width: 100%;
+  height: 100%;
 }
 
 .hero-slide {
   position: relative;
+  height: 100vh;
 }
 
 .hero-image {
   width: 100%;
-  height: 80vh; /* Full viewport height */
+  height: 100vh;
   object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* darker overlay for readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  max-width: 700px;
-  padding: 30px;
-  background: rgba(0,0,0,0.35); /* soft transparent background behind text */
-  border-radius: 15px;
+  color: white;
+  padding: 20px;
 }
 
-.hero-overlay h1 {
+.hero-title {
   font-size: 3rem;
-  color: #D4AF37;
-  margin-bottom: 15px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #D4AF37; /* gold */
+  animation: fadeInDown 1s ease-in-out;
 }
 
-.hero-overlay p {
-  font-size: 1.3rem;
-  margin-bottom: 25px;
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
   color: #eee;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-  text-decoration: none;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.btn-primary,
+.btn-secondary {
   padding: 12px 25px;
-  border-radius: 8px;
-  margin-right: 15px;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #D4AF37;
+  background: #D4AF37; /* gold */
   color: #fff;
 }
 
 .btn-primary:hover {
+  background: #c9a030; /* darker gold */
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #D4AF37;
   color: #D4AF37;
 }
 
 .btn-secondary:hover {
-  background-color: #D4AF37;
+  background: #D4AF37;
   color: #121212;
   transform: scale(1.05);
 }
 
-/* Override slick arrows color */
+/* Slick arrows */
 .slick-prev:before,
 .slick-next:before {
-  color: #D4AF37;
-  font-size: 30px;
+  display: none !important;
 }
 
-/* Dots styling */
 .slick-dots li button:before {
-  color: #D4AF37;
+  color: #fff;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .hero-overlay h1 {
-    font-size: 2rem;
-  }
-  .hero-overlay p {
-    font-size: 1rem;
-  }
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero-buttons .btn-primary,
-  .hero-buttons .btn-secondary {
-    margin-right: 0;
-  }
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 480px) {
-  .hero-image {
-    height: 60vh;
-  }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }

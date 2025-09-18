@@ -9,6 +9,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Clients from "./components/Clients";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   const [showForm, setShowForm] = useState(false);
