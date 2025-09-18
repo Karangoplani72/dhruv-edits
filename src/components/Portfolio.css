@@ -1,0 +1,58 @@
+/* -------------------- Portfolio / Video Row -------------------- */
+.portfolio {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #D4AF37;
+}
+
+/* Horizontal scrolling video row */
+.video-row {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  background-color: #2C2C2C;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+}
+
+.portrait-video {
+  width: 180px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #000;
+}
+
+.video-card h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #D4AF37;
+  text-align: center;
+}
+.video-card p {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.4;
+}
