@@ -1,13 +1,16 @@
-import React from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
         <p>
-          Designed & Developed by <span>Karan Goplani</span>
+          Designed & Developed by <span>Karan Goplani </span> 
+          Visit my{" "}
+          <a href="https://karangoplani72.github.io/karan_portfolio_/" style={{ color: "#D4AF37" }}>
+            Portfolio
+          </a>
         </p>
         <div className="footer-socials">
           <a href="https://github.com/karangoplani72" target="_blank" rel="noreferrer"><FaGithub /></a>
