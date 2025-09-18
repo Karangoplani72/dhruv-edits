@@ -8,6 +8,7 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
+import Clients from "./components/Clients";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -18,6 +19,7 @@ function App() {
       <Hero setShowForm={setShowForm} />
       <About />
       <Services />
+      <Clients />
       <Portfolio />
       <Contact setShowForm={setShowForm} />
       <Footer />

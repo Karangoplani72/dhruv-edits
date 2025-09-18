@@ -8,7 +8,7 @@ function About() {
         {/* Left Side - Image */}
         <div className="about-image">
           <img
-            src="/dhruv.jpg" // 👉 replace with your photo
+            src="/images/dhruv.jpg"
             alt="Dhruv - Video Editor"
           />
         </div>
