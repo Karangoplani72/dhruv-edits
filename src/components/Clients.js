@@ -2,10 +2,11 @@ import "./Clients.css";
 
 function Clients() {
     const clients = [
-        { name: "Client A", logo: "/images/client1.png" },
-        { name: "Client B", logo: "/images/client2.png" },
-        { name: "Client C", logo: "/images/client3.png" },
-        { name: "Client D", logo: "/images/client4.png" },
+        { name: "@techthetix", logo: "/images/client1.png" },
+        { name: "@ankit.joshi._", logo: "/images/client2.png" },
+        { name: "@imrankerofficial", logo: "/images/client3.png" },
+        { name: "@karanlohiaafinance", logo: "/images/client4.png" },
+        { name: "@technomanyu", logo: "/images/client5.png" },
     ];
 
     return (
