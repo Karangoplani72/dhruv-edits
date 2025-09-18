@@ -54,13 +54,7 @@ body {
 
 
 /* -------------------- Footer -------------------- */
-.footer {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #1E1E1E;
-  color: #ccc;
-  border-top: 1px solid #333;
-}
+
 
 /* -------------------- Mobile & Tablet -------------------- */
 @media (max-width: 768px) {
